@@ -102,4 +102,10 @@ sudo nano default \
 ARP-Windows 10 поддерживает таблицу arp (протокол разрешения адресов), в которой хранятся записи IP в Media Access Control (MAC), разрешённые\
  системой. Инструмент arp позволяет просматривать всю таблицу, изменять записи и использовать её для определения MAC-адреса удалённого компьютера\
  ![arp](https://github.com/EVolgina/devops-netology14/blob/main/arp.JPG)
- 
+ Самый надежный способ обнаружить все подключенные к сети Linux устройства, в том числе и скрытые - это ARP сканирование локальной сети\
+  sudo apt install arp-scan - устанавливаем
+  Но сначала надо узнать сетевой интерфейс, который используется для подключения к сети. Для этого можно воспользоваться программой ip:\
+$ip addr list
+$sudo arp-scan --interface=enp24s0 (мой) --localnet
+![arpub]()
+ источник - (https://losst.pro/arp-skanirovanie-lokalnoj-seti-linux)
